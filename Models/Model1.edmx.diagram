@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6cda9c41d9ed49e0a95bf46b4a47a2ed" Name="Diagram1">
+        <EntityTypeShape EntityType="GameLatHinhModel.Achievement" Width="1.5" PointX="3.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.CardDictionary" Width="1.5" PointX="6" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.GameCard" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.Game" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.Inventory" Width="1.5" PointX="6" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.Item" Width="1.5" PointX="3.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.Level" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.Login" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.Move" Width="1.5" PointX="10.5" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.PlayerAchievement" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.Player" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameLatHinhModel.vw_Leaderboard" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="GameLatHinhModel.FK__PlayerAch__Achie__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__GameCards__DictI__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__GameCards__GameI__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__Moves__Card1ID__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__Moves__Card2ID__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__Games__LevelID__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__Games__PlayerID__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__Moves__GameID__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__Inventory__ItemI__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__Inventory__Playe__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__Login__PlayerID__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="GameLatHinhModel.FK__PlayerAch__Playe__75A278F5" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
