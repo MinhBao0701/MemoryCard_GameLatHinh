@@ -9,7 +9,7 @@ namespace MemoryCard_GameLatHinh_.DAL
     public class UserDAL
     {
         // Chuỗi kết nối đến SQL Server (Hãy thay đổi Server Name cho đúng với máy của bạn)
-        private string connectionString = @"Data Source=.;Initial Catalog=GameLatHinh;Integrated Security=True";
+        private string connectionString = DBHelper.ConnectionString;
 
         /// <summary>
         /// Kiểm tra đăng nhập bằng cách truy vấn bảng Login và lấy thông tin Player đi kèm.
@@ -32,13 +32,13 @@ namespace MemoryCard_GameLatHinh_.DAL
                 {
                     conn.Open();
                     SqlDataReader reader = cmd.ExecuteReader();
-
                     if (reader.Read())
                     {
                         return new UserDTO
                         {
+                            PlayerID = (int)reader["PlayerID"],  
                             Username = reader["Username"].ToString(),
-                            Password = "", // Không trả về mật khẩu để bảo mật
+                            Password = "",
                             FullName = reader["PlayerName"].ToString()
                         };
                     }

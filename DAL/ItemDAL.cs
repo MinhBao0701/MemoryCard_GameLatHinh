@@ -10,7 +10,7 @@ namespace MemoryCard_GameLatHinh_.DAL
     {
         // Chuỗi kết nối đến Database GameLatHinh
         // Bạn có thể dùng DatabaseHelper.ConnectionString nếu đã tạo lớp dùng chung
-        private string connectionString = @"Data Source=.;Initial Catalog=GameLatHinh;Integrated Security=True";
+        private string connectionString = DBHelper.ConnectionString;
 
         /// <summary>
         /// Lấy toàn bộ danh sách vật phẩm hỗ trợ từ bảng Items trong Database.

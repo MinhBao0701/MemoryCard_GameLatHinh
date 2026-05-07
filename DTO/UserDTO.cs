@@ -10,6 +10,7 @@ namespace Game_Lat_Hinh.DTO
     // Bắt buộc đổi thành public
     public class UserDTO
     {
+        public int PlayerID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string FullName { get; set; }

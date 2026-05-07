@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MemoryCard_GameLatHinh_;
+using MemoryCardGame.DTO;
+using System;
 using System.Data.SqlClient;
-using MemoryCardGame.DTO; // Chỉ giữ lại duy nhất namespace của nhóm
 
 namespace MemoryCardGame.DAL
 {
     public class PlayerDAL
     {
-        private string connectionString = @"Data Source=.;Initial Catalog=GameLatHinh;Integrated Security=True";
+        private string connectionString = DBHelper.ConnectionString;
 
         public PlayerDTO GetPlayerByID(int playerId)
         {
@@ -19,13 +20,12 @@ namespace MemoryCardGame.DAL
                 SqlDataReader r = cmd.ExecuteReader();
                 if (r.Read())
                 {
-                    // PlayerDTO này phải thuộc namespace MemoryCardGame.DTO
                     return new PlayerDTO
                     {
                         PlayerID = (int)r["PlayerID"],
                         PlayerName = r["PlayerName"].ToString(),
                         TotalCoins = (int)r["TotalCoins"],
-                        HighestLevel = (int)r["HighestLevel"],
+                        HighestLevel = (int)r["CurrentLevel"],  // ✅ sửa ở đây
                         HighScore = (int)r["HighScore"]
                     };
                 }
